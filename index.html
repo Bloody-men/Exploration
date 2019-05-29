@@ -1,1 +1,127 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>火烟效果</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+	<style type="text/css">
+		.bk{
+			position:relative;
+			height:600px;
+			border:2px solid red;
+			margin:20px auto; 
+		}
+		.an{
+			width: 120px;
+			height:40px;
+			position:absolute;
+			bottom:20px;
+			left: 50%;
+			margin-left:-60px;
+			background:#300808;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+		}
+		#petalbox > div {
+		    position: absolute;
+		    animation-iteration-count: 1;
+		}
+		@-webkit-keyframes drop {
+		    0% {
+		        -webkit-transform: translate3d(0, 0, 0);
+		    }
+		    100% {
+		        -webkit-transform: translate3d(0, 1100px, 0);
+		    }
+		}
+	</style>
+</head>
+<body> 
+	<div class="bk fire" id="petalbox">
+		<div class="cla1" style="display: none;">
+	        <img src="petal.png" style="animation-name: clockwiseSpin; animation-duration: 3.86561s;">
+	    </div>
+	    <div class="cla2" style="display: none;">
+	        <img src="petal.png" style="animation-name: clockwiseSpin; animation-duration: 3.7812s;" style="display: none;">
+	    </div>
+	    <div class="cla3" style="display: none;">
+	        <img src="petal.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 3.46685s;">
+	    </div>
+	    <div class="cla4" style="display: none;">
+	        <img src="petal.png" style="animation-name: clockwiseSpin; animation-duration: 3.71361s;">
+	    </div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<div class="particle"></div>
+		<audio autoplay="autoplay" id="audioHint">
+			<source src="mp3.mp3">
+		</audio>
+		<div class="an">点击按钮</div>
+	</div>
+</body>
+<script type="text/javascript">
+		$(".an").click(function(){
+			$(".particle").show(1000);
+			setTimeout(function () {
+				$(".particle").hide(); 
+			}, 2000);
+			$(".cla1").css({"display":"block","top":"-169px","left":"5%","animation-name":"fade, drop","animation-duration":"2.2s, 2.2s","animation-delay":"2.1s, 2.1s"});
+			$(".cla2").css({"display":"block","top":"-178px","left":"30%","animation-name":"fade, drop","animation-duration":"2.2s, 2.2s","animation-delay":"1.7s, 1.7s"});
+			$(".cla3").css({"display":"block","top":"-173px","left":"60%","animation-name":"fade, drop","animation-duration":"2.2s, 2.2s","animation-delay":"2.9s, 2.9s"});
+			$(".cla4").css({"display":"block","top":"-180px","left":"80%","animation-name":"fade, drop","animation-duration":"2.2s, 2.2s","animation-delay":"1.8s, 1.8s"});
+			var audioDom = document.getElementById("audioHint");
+			audioDom.play();
+        })
+    </script>
+</script>
+</html>
